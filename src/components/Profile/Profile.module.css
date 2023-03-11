@@ -1,0 +1,9 @@
+.profileImg {
+    width: 950px;
+    height: 500px;
+    border-radius: 8px;
+}
+
+.profileMenu {
+    background-color: rgb(21, 20, 10);
+}
