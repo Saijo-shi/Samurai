@@ -1,6 +1,6 @@
 .header {
     grid-area: h;
-    background-color: rgb(21, 20, 10);
+    
     
     display: flex;
     font-size: 30px;
@@ -16,6 +16,7 @@
     width: 70.8333px;
     border-radius: 50%;
     height: 60px;
+    padding: 20px;
 
 }
 

@@ -1,11 +1,25 @@
 .nav {
-  background-color: rgb(21, 20, 10);
-    grid-area: n;
-    
-    
-    
-  }
-  .item {
-    color: white;
-    
-  } 
+  grid-area: n;
+  padding: 20px;
+}
+
+.item {
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  margin: 0 auto;
+  
+}
+
+.item a {
+  color: white;
+}
+
+.active {
+  color: rgb(101, 101, 209);
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 20px;
+  transition: font-size .2s ease-in-out;
+}
+
