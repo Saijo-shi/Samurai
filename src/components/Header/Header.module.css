@@ -1,15 +1,10 @@
 .header {
     grid-area: h;
-    
-    
     display: flex;
     font-size: 30px;
     color: white;
     font-weight: bold;
     align-items: center;
-    
-    
-
 }
 
 .header img {
@@ -17,7 +12,6 @@
     border-radius: 50%;
     height: 60px;
     padding: 20px;
-
 }
 
 .header p {

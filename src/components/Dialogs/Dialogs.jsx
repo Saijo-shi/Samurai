@@ -2,75 +2,43 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import classes from "./Dialogs.module.css";
 
+const DialogItem = (props) => {
+  let path = "/dialogs/" + props.id;
+  return (
+    <div className={classes.dialog}>
+      <NavLink
+        to={path}
+        className={(navData) =>
+          navData.isActive ? classes.active : classes.dialog
+        }
+      >
+        {props.name}
+      </NavLink>
+    </div>
+  );
+};
+
+const Message = (props) => {
+  return <div className={classes.message}>{props.message}</div>;
+};
+
 const Dialogs = (props) => {
   return (
     <div className={classes.dialogs}>
       <div className={classes.dialogsItems}>
-        <div className={classes.dialog}>
-          <NavLink
-            to="/dialogs/1"
-            className={(navData) =>
-              navData.isActive ? classes.active : classes.dialog
-            }
-          >
-            Vasilii
-          </NavLink>
-        </div>
-        <div className={classes.dialog}>
-          <NavLink
-            to="/dialogs/2"
-            className={(navData) =>
-              navData.isActive ? classes.active : classes.dialog
-            }
-          >
-            Liudmila
-          </NavLink>
-        </div>
-        <div className={classes.dialog}>
-          <NavLink
-            to="/dialogs/3"
-            className={(navData) =>
-              navData.isActive ? classes.active : classes.dialog
-            }
-          >
-            Valentina
-          </NavLink>
-        </div>
-        <div className={classes.dialog}>
-          <NavLink
-            to="/dialogs/4"
-            className={(navData) =>
-              navData.isActive ? classes.active : classes.dialog
-            }
-          >
-            Elena
-          </NavLink>
-        </div>
-        <div className={classes.dialog}>
-          <NavLink
-            to="/dialogs/5"
-            className={(navData) =>
-              navData.isActive ? classes.active : classes.dialog
-            }
-          >
-            Denis
-          </NavLink>
-        </div>
-        <div className={classes.dialog}>
-          <NavLink
-            to="/dialogs/6"
-            className={(navData) =>
-              navData.isActive ? classes.active : classes.dialog
-            }
-          >
-            Nikolai
-          </NavLink>
-        </div>
+        <DialogItem name="Vasilii" id="1" />
+        <DialogItem name="Liudmila" id="2" />
+        <DialogItem name="Valentina" id="3" />
+        <DialogItem name="Elena" id="4" />
+        <DialogItem name="Denis" id="5" />
+        <DialogItem name="Nikolai" id="6" />
       </div>
       <div className={classes.messages}>
-        <div className={classes.message}>Hi</div>
-        <div className={classes.message}>How is your IT-Kamasutra</div>
-        <div className={classes.message}>Yo</div>
+        <Message message="Hi" />
+        <Message message="How is your IT-Kamasutra" />
+        <Message message="Yo" />
+        <Message message="Yo" />
+        <Message message="Yo" />
       </div>
     </div>
   );

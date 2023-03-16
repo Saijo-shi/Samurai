@@ -4,3 +4,10 @@
 .item img {
     width: 80px;
 }
+
+.postsBlock {
+    padding: 10px;
+}
+.postsHeader {
+    color: rgb(101, 101, 209);
+}
