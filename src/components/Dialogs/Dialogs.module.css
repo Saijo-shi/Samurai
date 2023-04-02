@@ -23,7 +23,7 @@
     padding: 10px;
 }
 
-.message {}
+.message img {width: 80px;}
 
 .active {
     color: rgb(101, 101, 209);

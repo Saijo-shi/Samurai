@@ -75,6 +75,28 @@ let state = {
       },
     ],
   },
+
+  friendsPage: {
+    friends: [
+      {
+        id: 1,
+        name: "Katya",
+       
+      },
+      {
+        id: 2,
+        name: "Sasha",
+      },
+      {
+        id: 3,
+        name: "Vika",
+      },
+      {
+        id: 4,
+        name: "Igor",
+      },
+    ],
+  },
 };
 
 export default state;
