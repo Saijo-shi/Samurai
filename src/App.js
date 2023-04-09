@@ -31,7 +31,7 @@ const App = (props) => {
             <Route path="/settings" element={<Settings />} />
             <Route
               path="/friends/*"
-              element={<Friends state={props.state.friendsPage} />}
+              element={<Friends state={props.state.sidebar} />}
             />
           </Routes>
         </div>

@@ -76,7 +76,7 @@ let state = {
     ],
   },
 
-  friendsPage: {
+  sidebar: {
     friends: [
       {
         id: 1,
