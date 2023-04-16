@@ -24,6 +24,7 @@ let state = {
         likesCount: 23,
       },
     ],
+    newPostText: "it-kamasutra.com",
   },
 
   dialogsPage: {
@@ -83,7 +84,6 @@ let state = {
       {
         id: 1,
         name: "Katya",
-       
       },
       {
         id: 2,
@@ -101,15 +101,24 @@ let state = {
   },
 };
 
-export let addPost = (post) => {
-  
+window.state = state;
+
+export let addPost = () => {
   let newPost = {
-    id:5,
-    post: post,
-    likesCount: 0
-  }
-  state.profilePage.posts.push (newPost)
-  rerenderEntireTree (state);
-} 
+    id: 5,
+    post: state.profilePage.newPostText,
+    likesCount: 0,
+  };
+  state.profilePage.posts.push(newPost);
+  state.profilePage.newPostText = '';
+  
+  rerenderEntireTree(state);
+};
+
+export let updateNewPostText = (newText) => {
+  
+  state.profilePage.newPostText = newText;
+  rerenderEntireTree(state);
+};
 
 export default state;

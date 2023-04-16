@@ -17,5 +17,5 @@ const FriendItem = (props) => {
     </div>
   );
 };
-
+                                              
 export default FriendItem;
