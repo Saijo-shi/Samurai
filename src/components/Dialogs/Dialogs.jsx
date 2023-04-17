@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Button, Textarea } from "@chakra-ui/react";
 import classes from "./Dialogs.module.css";
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
@@ -28,10 +28,14 @@ const Dialogs = (props) => {
         <h3 className={classes.postsHeader}>Create new message</h3>
         <div>
           <div>
-            <textarea ref={newMessageElement}></textarea>
+            {/* <textarea ref={newMessageElement}></textarea> */}
+            <Textarea ref={newMessageElement} />
           </div>
           <div>
-            <button onClick={addMessage}>Add post</button>
+            {/* <button onClick={addMessage}>Add post</button> */}
+            <Button colorScheme="purple" variant="solid" onClick={addMessage}>
+            Add post
+            </Button>
           </div>
           <div>
             <button>Remove</button>

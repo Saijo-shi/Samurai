@@ -9,40 +9,42 @@ import News from "./components/News/News";
 import Profile from "./components/Profile/Profile";
 import Settings from "./components/Settings/Settings";
 import Friends from "./components/Navbar/Friends/Friends";
-
+import { ChakraProvider } from "@chakra-ui/react";
 const App = (props) => {
   return (
-    <BrowserRouter>
-      <div className="appWrapper">
-        <Header />
-        <Navbar />
-        <div className="app_wrapper_content">
-          <Routes>
-            <Route
-              path="/profile"
-              element={
-                <Profile
-                profilePage={props.state.profilePage}
-                  addPost={props.addPost}
-                  updateNewPostText={props.updateNewPostText}
-                />
-              }
-            />
-            <Route
-              path="/dialogs/*"
-              element={<Dialogs state={props.state.dialogsPage} />}
-            />
-            <Route path="/news" element={<News />} />
-            <Route path="/music" element={<Music />} />
-            <Route path="/settings" element={<Settings />} />
-            <Route
-              path="/friends/*"
-              element={<Friends state={props.state.sidebar} />}
-            />
-          </Routes>
+    <ChakraProvider>
+      <BrowserRouter>
+        <div className="appWrapper">
+          <Header />
+          <Navbar />
+          <div className="app_wrapper_content">
+            <Routes>
+              <Route
+                path="/profile"
+                element={
+                  <Profile
+                    profilePage={props.state.profilePage}
+                    addPost={props.addPost}
+                    updateNewPostText={props.updateNewPostText}
+                  />
+                }
+              />
+              <Route
+                path="/dialogs/*"
+                element={<Dialogs state={props.state.dialogsPage} />}
+              />
+              <Route path="/news" element={<News />} />
+              <Route path="/music" element={<Music />} />
+              <Route path="/settings" element={<Settings />} />
+              <Route
+                path="/friends/*"
+                element={<Friends state={props.state.sidebar} />}
+              />
+            </Routes>
+          </div>
         </div>
-      </div>
-    </BrowserRouter>
+      </BrowserRouter>
+    </ChakraProvider>
   );
 };
 
