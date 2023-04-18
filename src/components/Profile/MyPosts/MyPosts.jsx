@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "./MyPosts.module.css";
 import Post from "./Post/Post";
+import { Button, Textarea } from "@chakra-ui/react";
 
 const MyPosts = (props) => {
   let postsElements = props.posts.map((posts) => (
@@ -21,17 +22,20 @@ const MyPosts = (props) => {
       <h3 className={classes.postsHeader}>My posts</h3>
       <div>
         <div>
-          <textarea
+          {/* <textarea
             onChange={onPostChange}
             ref={newPostElement}
             value={props.newPostText}
-          />
+          /> */}
+          <Textarea w="500px" mb="5" mt="3" onChange={onPostChange}
+            ref={newPostElement}
+            value={props.newPostText}/>
         </div>
         <div>
-          <button onClick={addPost}>Add post</button>
+          <Button colorScheme="purple" variant="solid" m="2" onClick={addPost}>Add post</Button>
         </div>
         <div>
-          <button>Remove</button>
+        <Button colorScheme="purple" variant="solid" m="2">Remove post</Button>
         </div>
       </div>
       <div className={classes.postsBlock}>{postsElements}</div>

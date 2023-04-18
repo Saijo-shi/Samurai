@@ -29,16 +29,18 @@ const Dialogs = (props) => {
         <div>
           <div>
             {/* <textarea ref={newMessageElement}></textarea> */}
-            <Textarea ref={newMessageElement} />
+            <Textarea w="500px" mb="5" mt="3" ref={newMessageElement} />
           </div>
           <div>
             {/* <button onClick={addMessage}>Add post</button> */}
-            <Button colorScheme="purple" variant="solid" onClick={addMessage}>
-            Add post
+            <Button colorScheme="purple" variant="solid" m="2" onClick={addMessage}>
+            Add message
             </Button>
           </div>
           <div>
-            <button>Remove</button>
+          <Button colorScheme="purple" m="2" variant="solid">
+            Remove message
+            </Button>
           </div>
         </div>
       </div>
