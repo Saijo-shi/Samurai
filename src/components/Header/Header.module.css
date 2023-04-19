@@ -9,8 +9,8 @@
 
 .header img {
     width: 70.8333px;
-    border-radius: 50%;
-    height: 50px;
+    /* border-radius: 50%; */
+    height: 65px;
     padding: 10px;
 }
 
