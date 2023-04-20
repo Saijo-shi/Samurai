@@ -77,6 +77,7 @@ let state = {
         message: "Yo",
       },
     ],
+    newMessageText: "it-kamasutra.com",
   },
 
   sidebar: {
@@ -110,15 +111,30 @@ export let addPost = () => {
     likesCount: 0,
   };
   state.profilePage.posts.push(newPost);
-  state.profilePage.newPostText = '';
-  
+  state.profilePage.newPostText = "";
+
   rerenderEntireTree(state);
 };
 
-export let updateNewPostText = (newText) => {
-  
-  state.profilePage.newPostText = newText;
+export let updateNewPostText = (newPost) => {
+  state.profilePage.newPostText = newPost;
   rerenderEntireTree(state);
+};
+
+export let addMessage = () => {
+  let newMessage = {
+    id: 6,
+    message: state.dialogsPage.newMessageText,
+  };
+  state.dialogsPage.messages.push(newMessage);
+  state.dialogsPage.newMessageText = "";
+
+  rerenderEntireTree(state);
+};
+
+export let updateNewMessageText = (newMessage) => {
+  state.dialogsPage.newMessageText = newMessage;
+  // rerenderEntireTree(state);
 };
 
 export default state;
