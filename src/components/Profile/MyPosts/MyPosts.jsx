@@ -4,6 +4,8 @@ import Post from "./Post/Post";
 import { Flex, Heading, Button, Textarea } from "@chakra-ui/react";
 
 const MyPosts = (props) => {
+
+  let newPostElement = React.createRef();
   let postsElements = props.posts.map((posts) => (
     <Post message={posts.post} likesCount={posts.likesCount} />
   ));
@@ -14,7 +16,7 @@ const MyPosts = (props) => {
   let addPost = () => {
     props.addPost();
   };
-  let newPostElement = React.createRef();
+  
 
   return (
     <div>
