@@ -104,11 +104,11 @@ let state = {
 
 window.state = state;
 
-export let addPost = () => {
+export let addPost = (postMessage) => {
   let newPost = {
     id: 5,
-    post: state.profilePage.newPostText,
-    likesCount: 0,
+    post: postMessage,
+    likesCount: 0,  
   };
   state.profilePage.posts.push(newPost);
   state.profilePage.newPostText = "";
@@ -116,8 +116,8 @@ export let addPost = () => {
   rerenderEntireTree(state);
 };
 
-export let updateNewPostText = (newPost) => {
-  state.profilePage.newPostText = newPost;
+export let updateNewPostText = (newText) => {
+  state.profilePage.newPostText = newText;
   rerenderEntireTree(state);
 };
 
@@ -134,7 +134,7 @@ export let addMessage = () => {
 
 export let updateNewMessageText = (newMessage) => {
   state.dialogsPage.newMessageText = newMessage;
-  // rerenderEntireTree(state);
+  rerenderEntireTree(state);
 };
 
 export default state;

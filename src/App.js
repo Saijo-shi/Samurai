@@ -37,6 +37,7 @@ const App = (props) => {
                     addMessage={props.addMessage}
                     updateNewMessageText={props.updateNewMessageText}
                     
+                    
                   />
                 }
               />

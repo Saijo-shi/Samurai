@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading, Flex, Button, Textarea } from "@chakra-ui/react";
+import { Heading, Flex, Button, Textarea, Container } from "@chakra-ui/react";
 import classes from "./Dialogs.module.css";
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
@@ -24,7 +24,7 @@ const Dialogs = (props) => {
   };
 
   return (
-    <div>
+    <Container>
       <div className={classes.dialogs}>
         <div className={classes.dialogsItems}>{DialogsElements}</div>
         <div className={classes.messages}>{messagesElements}</div>
@@ -59,7 +59,7 @@ const Dialogs = (props) => {
           </Flex>
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 

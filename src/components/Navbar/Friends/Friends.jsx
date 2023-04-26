@@ -1,7 +1,7 @@
 import React from "react";
 
 import FriendItem from "./Friends/FriendItem";
-import { Button, Container, Grid } from "@chakra-ui/react";
+import { Box, Button, Container, Grid } from "@chakra-ui/react";
 
 const Friends = (props) => {
   let FriendsElements = props.state.friends.map((friends) => (
@@ -9,10 +9,14 @@ const Friends = (props) => {
   ));
   return (
     <Grid>
-      <Container>{FriendsElements}</Container>
-      <Button colorScheme="purple" variant="solid" m="2">
-        Search friend
-      </Button>
+      <Container>
+        {FriendsElements}
+        <Box w='900px'>
+          <Button colorScheme="purple" variant="solid" m="2">
+            Search friend
+          </Button>
+        </Box>
+      </Container>
     </Grid>
   );
 };
