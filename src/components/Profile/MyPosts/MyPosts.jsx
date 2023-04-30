@@ -5,12 +5,13 @@ import { Flex, Heading, Button, Textarea } from "@chakra-ui/react";
 
 const MyPosts = (props) => {
   let postsElements = props.posts.map((posts) => (
-    <Post message={posts.post} likesCount={posts.likesCount} />
+    <Post message={posts.message} likesCount={posts.likesCount} />
   ));
   let newPostElement = React.createRef();
 
   let addPost = () => {
-    props.addPost();
+    let text = newPostElement.current.value;
+    props.addPost(text);
   };
   let onPostChange = () => {
     let text = newPostElement.current.value;

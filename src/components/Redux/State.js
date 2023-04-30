@@ -5,26 +5,26 @@ let state = {
     posts: [
       {
         id: 1,
-        post: "Hi, how are you?",
+        message: "Hi, how are you?",
         likesCount: 12,
       },
       {
         id: 2,
-        post: "It's my first post",
+        message: "It's my first post",
         likesCount: 23,
       },
       {
         id: 3,
-        post: "Goin outdoors",
+        message: "Goin outdoors",
         likesCount: 12,
       },
       {
         id: 4,
-        post: "Just doin HW",
+        message: "Just doin HW",
         likesCount: 23,
       },
     ],
-    newPostText: "it-kamasutra.com",
+    newPostText: 'it-kamasutra.com',
   },
 
   dialogsPage: {
@@ -55,29 +55,29 @@ let state = {
       },
     ],
 
-    messages: [
+    chats: [
       {
         id: 1,
-        message: "Hi",
+        chat: "Hi",
       },
       {
         id: 2,
-        message: "How is your IT-Kamasutra?",
+        chat: "How is your IT-Kamasutra?",
       },
       {
         id: 3,
-        message: "Yo",
+        chat: "Yo",
       },
       {
         id: 4,
-        message: "Yo",
+        chat: "Yo",
       },
       {
         id: 5,
-        message: "Yo",
+        chat: "Yo",
       },
     ],
-    newMessageText: "it-kamasutra.com",
+    newChatText: "it-kamasutra.com",
   },
 
   sidebar: {
@@ -102,12 +102,12 @@ let state = {
   },
 };
 
-window.state = state;
+// window.state = state;
 
 export let addPost = (postMessage) => {
   let newPost = {
     id: 5,
-    post: postMessage,
+    message: postMessage,
     likesCount: 0,  
   };
   state.profilePage.posts.push(newPost);
@@ -121,19 +121,19 @@ export let updateNewPostText = (newText) => {
   rerenderEntireTree(state);
 };
 
-export let addMessage = () => {
-  let newMessage = {
+export let addChat = (chatMessage) => {
+  let newChat = {
     id: 6,
-    message: state.dialogsPage.newMessageText,
+    chat: chatMessage,
   };
-  state.dialogsPage.messages.push(newMessage);
-  state.dialogsPage.newMessageText = "";
+  state.dialogsPage.chats.push(newChat);
+  state.dialogsPage.newChatText = "";
 
   rerenderEntireTree(state);
 };
 
-export let updateNewMessageText = (newMessage) => {
-  state.dialogsPage.newMessageText = newMessage;
+export let updateNewChatText = (newChat) => {
+  state.dialogsPage.newChatText = newChat;
   rerenderEntireTree(state);
 };
 
