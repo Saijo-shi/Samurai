@@ -33,7 +33,7 @@ const App = (props) => {
                 path="/dialogs/*"
                 element={
                   <Dialogs
-                    state={props.state.dialogsPage.chats}
+                    state={props.state.dialogsPage}
                     addChat={props.addChat}
                     updateNewChatText={props.updateNewMessageText}
                   />

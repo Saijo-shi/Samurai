@@ -11,19 +11,19 @@ import Message from "./Message/Message";
 import classes from "./../Dialogs.module.css";
 
 const MyChats = (props) => {
-  let chatsElements = props.state.dialogsPage.chats.map((chats) => (
+  let chatsElements = props.chats.map((chat) => (
     <Message
-      chat={props.state.dialogsPage.chats.chat}
+      chat={chat.chat}
       newChatText={props.state.dialogsPage.newChatText}
-      id={props.dialogsPage.chats.id}
+      id={chat.id}
     />
   ));
 
   let newChatElement = React.createRef();
 
   let addChat = () => {
-    let text = newChatElement.current.value;
-    props.addChat(text);
+    // let text = newChatElement.current.value;
+    props.addChat();
   };
 
   let onChatChange = () => {
@@ -44,7 +44,7 @@ const MyChats = (props) => {
         mt="3"
         ref={newChatElement}
         onChange={onChatChange}
-        value={props.newChatText}
+        value={props.text}
       />
       <Flex>
         <Button colorScheme="purple" variant="solid" m="2" onClick={addChat}>

@@ -13,7 +13,12 @@ const Dialogs = (props) => {
     <Container>
       <Box>className={classes.dialogs} </Box>
       <Box className={classes.dialogsItems}>{DialogsElements}</Box>
-      <MyChats></MyChats>
+      <MyChats
+        chats={props.state.chats}
+        addChat={props.addChat}
+        newChatText={props.state.newChatText}
+        updateNewChatText={props.updateNewChatText}
+      />
     </Container>
   );
 };
