@@ -13,6 +13,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 const App = (props) => {
   return (
     <ChakraProvider>
+      
       <BrowserRouter>
         <div className="appWrapper">
           <Header />
@@ -33,9 +34,9 @@ const App = (props) => {
                 path="/dialogs/*"
                 element={
                   <Dialogs
-                    state={props.state.dialogsPage}
-                    addChat={props.addChat}
-                    updateNewChatText={props.updateNewMessageText}
+                    dialogsPage={props.state.dialogsPage}
+                    addMessage={props.addMessage}
+                    updateNewMessageText={props.updateNewMessageText}
                   />
                 }
               />

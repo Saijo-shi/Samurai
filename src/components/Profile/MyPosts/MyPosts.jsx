@@ -12,7 +12,7 @@ import {
 
 const MyPosts = (props) => {
   let postsElements = props.posts.map((posts) => (
-    <Post message={posts.message} likesCount={posts.likesCount} />
+    <Post post={posts.post} likesCount={posts.likesCount} />
   ));
 
   let newPostElement = React.createRef();
@@ -37,9 +37,10 @@ const MyPosts = (props) => {
         w="500px"
         mb="5"
         mt="3"
+        value={props.newPostText}
         onChange={onPostChange}
         ref={newPostElement}
-        value={props.newPostText}
+        
       />
 
       <Flex>
