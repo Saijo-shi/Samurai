@@ -1,17 +1,21 @@
 import React from "react";
-import classes from "./Post.module.css";
+import { Container, Box, Image } from "@chakra-ui/react";
 
 const Post = (props) => {
-  
   return (
-    <div className={classes.item}>
-      <img src="https://dumbosdiary.com/wp-content/uploads/2017/04/digital-painting-profile-pic.jpg" alt="ava"></img>
-      {props.post}
-      <div>
-
+    <Container>
+      <Box>
+        <Image
+          boxSize="80px"
+          objectFit="cover"
+          src="https://dumbosdiary.com/wp-content/uploads/2017/04/digital-painting-profile-pic.jpg"
+          alt="avatar"
+          m={[2, 3]}
+        ></Image>
+        {props.post}
+      </Box>
       <span>Like{props.likesCount}</span>
-      </div>
-    </div>
+    </Container>
   );
 };
 

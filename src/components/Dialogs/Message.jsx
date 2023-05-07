@@ -1,21 +1,22 @@
 import React from "react";
-import classes from "./Dialogs.module.css";
-import { Box, Container, Flex } from "@chakra-ui/react";
+
+import { Image, Box, Container, Flex } from "@chakra-ui/react";
 
 const Message = (props) => {
   return (
-    <Container className={classes.message}>
+    <Container>
       <Flex>
         <Box>
-          <img
+          <Image
+            m={[2, 3]}
+            boxSize="80px"
+            objectFit="cover"
             src="https://dumbosdiary.com/wp-content/uploads/2017/04/digital-painting-profile-pic.jpg"
             alt="avatar"
-          ></img>
+          ></Image>
         </Box>
-        <Box>{props.message}</Box>
+        <Box m={[2, 3]}>{props.message}</Box>
       </Flex>
-
-     
     </Container>
   );
 };
