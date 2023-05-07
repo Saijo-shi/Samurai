@@ -13,7 +13,6 @@ import { ChakraProvider } from "@chakra-ui/react";
 const App = (props) => {
   return (
     <ChakraProvider>
-      
       <BrowserRouter>
         <div className="appWrapper">
           <Header />

@@ -1,21 +1,21 @@
 import React from "react";
-
-import classes from "./ProfileInfo.module.css";
+import { Text, Image, Box } from "@chakra-ui/react";
 
 const ProfileInfo = () => {
   return (
-    <div>
-      <div>
-        <img
-          className={classes.profileImg}
-          src="https://damion.club/uploads/posts/2022-01/1642314871_26-damion-club-p-foni-dlya-oformleniya-sotsialnikh-setei-27.jpg"
-          alt="main_image"
-        ></img>
-        <div className={classes.descriptionBlock}>
-          <div>ava+description</div>
-        </div>
-      </div>
-    </div>
+    <Box>
+      <Box>
+        <Box boxSize="m">
+          <Image
+            src="https://d585tldpucybw.cloudfront.net/sfimages/default-source/blogs/templates/social/reactt-dark_1200x628.png?sfvrsn=19de8226_2"
+            alt="main_image"
+          />
+        </Box>
+        <Box>
+          <Text>ava+description</Text>
+        </Box>
+      </Box>
+    </Box>
   );
 };
 

@@ -2,12 +2,12 @@ import React from "react";
 import MyPosts from "./MyPosts/MyPosts";
 
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
-import { Box } from "@chakra-ui/react";
+import { Container } from "@chakra-ui/react";
 
 const Profile = (props) => {
   return (
     
-      <Box w='900px' >
+      <Container maxW='2xl' centerContent>
         <ProfileInfo />
         <MyPosts
           posts={props.profilePage.posts}
@@ -15,7 +15,7 @@ const Profile = (props) => {
           newPostText={props.profilePage.newPostText}
           updateNewPostText={props.updateNewPostText}
         />
-      </Box>
+      </Container>
 
   );
 };

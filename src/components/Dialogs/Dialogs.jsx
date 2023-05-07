@@ -3,7 +3,7 @@ import { Container, Box, Button, Flex, Textarea } from "@chakra-ui/react";
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message";
 
-const Dialogs = (props) => {;;
+const Dialogs = (props) => {
   let DialogsElements = props.dialogsPage.dialogs.map((dialog) => (
     <DialogItem name={dialog.name} id={dialog.id} />
   ));
@@ -25,21 +25,23 @@ const Dialogs = (props) => {;;
   };
 
   return (
-    <Container>
-      <Box>{DialogsElements}</Box>
-      <Flex>
-        <Textarea
-          w="500px"
-          mb="5"
-          mt="3"
-          mr="3"
-          value={props.dialogsPage.newMessageText}
-          ref={newMessageElement}
-          onChange={onMessageChange}
-        />
-        <Button mt="3" colorScheme="purple" onClick={addMessage}>
-          Send message
-        </Button>
+    <Container maxW="2xl" centerContent>
+      <Flex >
+        <Box>{DialogsElements}</Box>
+        <Flex>
+          <Textarea
+            w="500px"
+            mb="5"
+            mt="3"
+            mr="3"
+            value={props.dialogsPage.newMessageText}
+            ref={newMessageElement}
+            onChange={onMessageChange}
+          />
+          <Button mt="3" colorScheme="purple" onClick={addMessage}>
+            Send message
+          </Button>
+        </Flex>
       </Flex>
       <Box>{MessageElements}</Box>
     </Container>

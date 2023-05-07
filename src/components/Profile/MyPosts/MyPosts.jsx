@@ -40,7 +40,6 @@ const MyPosts = (props) => {
         value={props.newPostText}
         onChange={onPostChange}
         ref={newPostElement}
-        
       />
 
       <Flex>
