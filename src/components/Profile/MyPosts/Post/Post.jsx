@@ -4,7 +4,7 @@ import { Container, Box, Image } from "@chakra-ui/react";
 const Post = (props) => {
   return (
     <Container>
-      <Box>
+      <Box display="flex" alignItems="center" justifyContent="space-between">
         <Image
           boxSize="80px"
           objectFit="cover"
@@ -12,9 +12,9 @@ const Post = (props) => {
           alt="avatar"
           m={[2, 3]}
         ></Image>
-        {props.post}
+        <Box>{props.post}</Box>
+        <Box>Likes {props.likesCount}</Box>
       </Box>
-      <span>Like{props.likesCount}</span>
     </Container>
   );
 };
