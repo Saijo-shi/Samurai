@@ -6,17 +6,14 @@ import { Container } from "@chakra-ui/react";
 
 const Profile = (props) => {
   return (
-    
-      <Container maxW='2xl' centerContent>
-        <ProfileInfo />
-        <MyPosts
-          posts={props.profilePage.posts}
-          addPost={props.addPost}
-          newPostText={props.profilePage.newPostText}
-          updateNewPostText={props.updateNewPostText}
-        />
-      </Container>
-
+    <Container maxW="2xl" centerContent>
+      <ProfileInfo />
+      <MyPosts
+        posts={props.profilePage.posts}
+        dispatch={props.dispatch}
+        newPostText={props.profilePage.newPostText}
+      />
+    </Container>
   );
 };
 
