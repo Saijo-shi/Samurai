@@ -15,19 +15,19 @@ const Dialogs = (props) => {
   let newMessageElement = React.createRef();
 
   let addMessage = () => {
-    let text = newMessageElement.current.value;
-    props.addMessage(text);
+    props.dispatch({ type: "ADD-MESSAGE" });
   };
 
   let onMessageChange = () => {
     let text = newMessageElement.current.value;
-    props.updateNewMessageText(text);
+    let action = { type: "UPDATE-NEW-MESSAGE-TEXT", newText: text };
+    props.dispatch(action);
   };
 
   return (
-    <Container maxW="2xl" centerContent>
-      <Flex >
-        <Box>{DialogsElements}</Box>
+    <Container maxW="2xl">
+      <Box>{DialogsElements}</Box>
+      <Flex>
         <Flex>
           <Textarea
             w="500px"

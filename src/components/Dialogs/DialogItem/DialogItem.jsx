@@ -1,11 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import classes from "./../Dialogs.module.css";
+import { Box } from "@chakra-ui/react";
 
 const DialogItem = (props) => {
   let path = "/dialogs/*" + props.id;
   return (
-    <div className={classes.dialog}>
+    <Box className={classes.dialog}>
       <NavLink
         to={path}
         className={(navData) =>
@@ -14,7 +15,7 @@ const DialogItem = (props) => {
       >
         {props.name}
       </NavLink>
-    </div>
+    </Box>
   );
 };
 

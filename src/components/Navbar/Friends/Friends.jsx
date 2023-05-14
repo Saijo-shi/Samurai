@@ -9,7 +9,7 @@ const Friends = (props) => {
   ));
   return (
     <Grid>
-      <Container>
+      <Container maxW="2xl">
         {FriendsElements}
         <Box w='900px'>
           <Button colorScheme="purple" variant="solid" m="2">
