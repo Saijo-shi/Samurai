@@ -1,6 +1,8 @@
 import React from "react";
 import classes from "./MyPosts.module.css";
 import Post from "./Post/Post";
+
+import {updateNewPostTextActionCreator, addPostActionCreator} from "../../Redux/State.js"
 import {
   Flex,
   Heading,
@@ -10,6 +12,8 @@ import {
   Box,
 } from "@chakra-ui/react";
 
+
+
 const MyPosts = (props) => {
   let postsElements = props.posts.map((posts) => (
     <Post post={posts.post} likesCount={posts.likesCount} />
@@ -18,12 +22,12 @@ const MyPosts = (props) => {
   let newPostElement = React.createRef();
 
   let addPost = () => {
-    props.dispatch({ type: "ADD-POST" });
+    props.dispatch(addPostActionCreator());
   };
 
   let onPostChange = () => {
     let text = newPostElement.current.value;
-    let action = { type: "UPDATE-NEW-POST-TEXT", newText: text };
+    let action = (updateNewPostTextActionCreator(text));
     props.dispatch(action);
   };
 
